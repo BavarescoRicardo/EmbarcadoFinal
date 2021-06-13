@@ -1,0 +1,16 @@
+i1_TIMER1_Set: CODE, 599 0 9
+___aldiv: CODE, 33 0 143
+_TIMER1_Set: CODE, 590 0 9
+__stringtab: STRING, 367 0 6
+_TIMER1_Init: CODE, 575 0 15
+__stringdata: STRING, 373 0 63
+_USART_WriteChar: CODE, 608 0 8
+_ISR: CODE, 176 0 117
+_main: CODE, 436 0 65
+__initialization: CODE, 21 0 8
+_ADC_Read: CODE, 533 0 24
+_USART_WriteString: CODE, 501 0 32
+_ADC_Init: CODE, 557 0 18
+i1_USART_WriteChar: CODE, 616 0 8
+_USART_Init: CODE, 293 0 74
+Total: 599

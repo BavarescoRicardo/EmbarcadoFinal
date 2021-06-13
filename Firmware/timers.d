@@ -1,0 +1,1 @@
+ timers.d  timers.p1:  C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/timers.c C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/timers.h C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/config.h

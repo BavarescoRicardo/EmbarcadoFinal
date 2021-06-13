@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/08/25 22:24:26.000.533,=D:\Diversos\Joel Martins\Embarcadero Projects\Unit1.cpp</Transaction>
+    <Transaction>2020/08/25 22:24:26.000.453,=D:\Diversos\Joel Martins\Embarcadero Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/08/25 22:32:50.000.850,D:\Diversos\Joel Martins\Embarcadero Projects\Principal.h=D:\Diversos\Joel Martins\Embarcadero Projects\Unit1.h</Transaction>
+    <Transaction>2020/08/25 22:32:50.000.850,D:\Diversos\Joel Martins\Embarcadero Projects\Principal.dfm=D:\Diversos\Joel Martins\Embarcadero Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/08/25 22:32:50.000.850,D:\Diversos\Joel Martins\Embarcadero Projects\Principal.cpp=D:\Diversos\Joel Martins\Embarcadero Projects\Unit1.cpp</Transaction>
+    <Transaction>2020/08/25 22:33:26.000.953,D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio\Principal.dfm=D:\Diversos\Joel Martins\Embarcadero Projects\Principal.dfm</Transaction>
+    <Transaction>2020/08/25 22:33:26.000.953,D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio\Principal.h=D:\Diversos\Joel Martins\Embarcadero Projects\Principal.h</Transaction>
+    <Transaction>2020/08/25 22:33:26.000.953,D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio\Principal.cpp=D:\Diversos\Joel Martins\Embarcadero Projects\Principal.cpp</Transaction>
+    <Transaction>2020/08/25 22:33:44.000.986,D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio.cbproj=D:\Diversos\Joel Martins\Embarcadero Projects\Project1.cbproj</Transaction>
+    <Transaction>2020/08/25 22:33:44.000.980,D:\Diversos\Joel Martins\Embarcadero Projects\SupervisorioPCH1.h=D:\Diversos\Joel Martins\Embarcadero Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/08/25 22:33:56.000.031,D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio\SupervisorioPCH1.h=D:\Diversos\Joel Martins\Embarcadero Projects\SupervisorioPCH1.h</Transaction>
+    <Transaction>2020/08/25 22:33:59.000.956,D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio\Supervisorio.cbproj=D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio.cbproj</Transaction>
+    <Transaction>2020/08/25 23:11:42.000.368,=D:\Diversos\Joel Martins\Embarcadero Projects\Supervisorio\SerialPort.cpp</Transaction>
+    <Transaction>2020/09/24 23:52:00.000.382,=C:\Users\Igor\Desktop\Supervisorio\Unit1.cpp</Transaction>
+    <Transaction>2020/09/24 23:52:31.000.380,C:\Users\Igor\Desktop\Supervisorio\Unit1.cpp=C:\Users\Igor\Desktop\Supervisorio\frmMonitorarDados.cpp</Transaction>
+    <Transaction>2020/09/24 23:52:31.000.380,C:\Users\Igor\Desktop\Supervisorio\Unit1.dfm=C:\Users\Igor\Desktop\Supervisorio\frmMonitorarDados.dfm</Transaction>
+    <Transaction>2020/09/24 23:52:31.000.380,C:\Users\Igor\Desktop\Supervisorio\Unit1.h=C:\Users\Igor\Desktop\Supervisorio\frmMonitorarDados.h</Transaction>
+    <Transaction>2020/09/27 00:36:36.000.540,=C:\Users\Igor\Desktop\Supervisorio\Unit1.cpp</Transaction>
+    <Transaction>2020/09/27 00:36:51.000.329,C:\Users\Igor\Desktop\Supervisorio\Unit1.dfm=C:\Users\Igor\Desktop\Supervisorio\frmConfigSerial.dfm</Transaction>
+    <Transaction>2020/09/27 00:36:51.000.329,C:\Users\Igor\Desktop\Supervisorio\Unit1.h=C:\Users\Igor\Desktop\Supervisorio\frmConfigSerial.h</Transaction>
+    <Transaction>2020/09/27 00:36:51.000.329,C:\Users\Igor\Desktop\Supervisorio\Unit1.cpp=C:\Users\Igor\Desktop\Supervisorio\frmConfigSerial.cpp</Transaction>
+    <Transaction>2020/09/27 01:16:46.000.616,=C:\Users\Igor\Desktop\Supervisorio\Unit1.cpp</Transaction>
+    <Transaction>2020/09/27 01:17:07.000.009,C:\Users\Igor\Desktop\Supervisorio\Unit1.h=C:\Users\Igor\Desktop\Supervisorio\frmSeletorDatas.h</Transaction>
+    <Transaction>2020/09/27 01:17:07.000.009,C:\Users\Igor\Desktop\Supervisorio\Unit1.dfm=C:\Users\Igor\Desktop\Supervisorio\frmSeletorDatas.dfm</Transaction>
+    <Transaction>2020/09/27 01:17:07.000.009,C:\Users\Igor\Desktop\Supervisorio\Unit1.cpp=C:\Users\Igor\Desktop\Supervisorio\frmSeletorDatas.cpp</Transaction>
+    <Transaction>2020/09/27 23:07:18.000.780,=C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Unit1.cpp</Transaction>
+    <Transaction>2020/09/27 23:07:31.000.979,C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Thread.h=C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Unit1.h</Transaction>
+    <Transaction>2020/09/27 23:07:31.000.979,C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Thread.cpp=C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Unit1.cpp</Transaction>
+    <Transaction>2020/09/28 01:17:58.000.313,C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\frmPrincipal.cpp=C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Principal.cpp</Transaction>
+    <Transaction>2020/09/28 01:17:58.000.313,C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\frmPrincipal.h=C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Principal.h</Transaction>
+    <Transaction>2020/09/28 01:17:58.000.313,C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\frmPrincipal.dfm=C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\Principal.dfm</Transaction>
+    <Transaction>2020/10/05 20:06:49.000.874,C:\Users\desenvolvimento\Downloads\INTEGRAÇÃO E SOFTWARE-HARDWARE\Supervisorio\frmConfigSerial.cpp=</Transaction>
+    <Transaction>2021/06/13 14:42:57.755,=C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Supervisorio\Supervisorio.todo</Transaction>
+  </Transactions>
+</BorlandProject>

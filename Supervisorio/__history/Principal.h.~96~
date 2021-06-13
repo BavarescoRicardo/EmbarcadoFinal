@@ -1,0 +1,139 @@
+//---------------------------------------------------------------------------
+#include "frmMonitorarDados.h"
+#include <System.Classes.hpp>
+#include <Vcl.Buttons.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.Dialogs.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.WinXPickers.hpp>
+#include <VCLTee.Chart.hpp>
+#include <VCLTee.Series.hpp>
+#include <VclTee.TeeGDIPlus.hpp>
+#include <VCLTee.TeEngine.hpp>
+#include <VCLTee.TeeProcs.hpp>
+
+#ifndef PrincipalH
+#define PrincipalH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <VCLTee.Chart.hpp>
+#include <VclTee.TeeGDIPlus.hpp>
+#include <VCLTee.TeEngine.hpp>
+#include <VCLTee.TeeProcs.hpp>
+#include "SerialPort.h"
+#include <Vcl.Imaging.pngimage.hpp>
+#include <Vcl.Buttons.hpp>
+#include <VCLTee.Series.hpp>
+#include <Vcl.WinXPickers.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.Dialogs.hpp>
+
+class Thread : public TThread
+{
+		private:
+		protected:
+				void __fastcall Execute();
+
+		public:
+				__fastcall Thread(bool CreateSuspended);
+};
+//---------------------------------------------------------------------------
+class TFormPrincipal : public TForm
+{
+__published:	// IDE-managed Components
+	TPanel *pnlConexao;
+	TChart *chtDados;
+	TFastLineSeries *serieCH1;
+	TTimePicker *eTempoDecorrido;
+	TMainMenu *menuSuperior;
+	TMenuItem *Arquivo1;
+	TMenuItem *Monitorar1;
+	TMenuItem *Abrir1;
+	TMenuItem *Abrirmonitordaportaserial1;
+	TOpenDialog *OpenDialog;
+	TSpeedButton *btnVoltarPagina;
+	TLabel *lblPagina;
+	TSpeedButton *btnAvancarPagina;
+	TMenuItem *Configuraesportaserial1;
+	TMenuItem *confPortasSerialAbrir;
+	TLabel *lblPortaSerial;
+	TComboBox *cmbPortaSerial;
+	TBitBtn *btnAtualizarPortas;
+	TLabel *lblBaudrate;
+	TComboBox *cmbBaudrate;
+	TButton *btnConectar;
+	TButton *btnDesconectar;
+	TProgressBar *pgbStatusConexao;
+	TButton *btnLimparGrafico;
+	TMenuItem *Abrirfaixadedatas1;
+	TGroupBox *gpPaginacao;
+	TGroupBox *gpTempoDecorrido;
+	void __fastcall btnAtualizarPortasClick(TObject *Sender);
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall btnConectarClick(TObject *Sender);
+	void __fastcall btnDesconectarClick(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall chtDadosAfterDraw(TObject *Sender);
+	void __fastcall Abrirmonitordaportaserial1Click(TObject *Sender);
+	void __fastcall Abrir1Click(TObject *Sender);
+	void __fastcall btnVoltarPaginaClick(TObject *Sender);
+	void __fastcall btnAvancarPaginaClick(TObject *Sender);
+	void __fastcall confPortasSerialAbrirClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall btnLimparGraficoClick(TObject *Sender);
+	void __fastcall Abrirfaixadedatas1Click(TObject *Sender);
+private:
+	// Métodos
+	void __fastcall AtualizarControles();
+	void __fastcall ListarPortasSeriais();
+	void __fastcall IniciarProcessos();
+	void __fastcall FinalizarProcessos();
+
+public:		// User declarations
+	__fastcall TFormPrincipal(TComponent* Owner);
+
+    // VARIÁVEIS DE CONTROLE
+	const float fatorDeConversao = 0.004887585532746823069403714565; // 5/1023
+	SerialPort *portaSerial;
+	Thread *threadAquisicao;
+	char buffer[7];
+	char temperatura[30];
+	int posicaoNoGrafico = 0;
+	bool comunicando = false;
+	FILE *arq_dados;
+	bool FArquivoAberto = false;
+    int FPaginaAtual = 0;
+	UnicodeString PathDadosTemperatura;
+	unsigned long PosicaoInicial;
+	unsigned long PosicaoAtual;
+	unsigned long PosicaoFinal;
+	// Controle de horario
+	unsigned int hora = 0;
+	unsigned int minu  = 0;
+	unsigned int seg  = 0;
+	unsigned int max_tela = 100;
+	// métodos
+	bool __fastcall VerificarCriarPastaDados();
+	void __fastcall AtualizarArquivo(float temperaturaLida);
+	void __fastcall FecharArquivo();
+	bool __fastcall AtualizarRelogio();
+	void __fastcall PlotarGraficoArquivo();
+	void __fastcall ConfigGrafico();
+	void __fastcall setLabelPaginaAtual();
+	void __fastcall HabDesabIniciarEncerrar(bool _AHab);
+	AnsiString __fastcall getStrData(AnsiString _SubsBarra);
+};
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
+extern PACKAGE TFormPrincipal *FormPrincipal;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,1 @@
+ adc.d  adc.p1:  C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/adc.c C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/config.h C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/adc.h

@@ -1,0 +1,504 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 12 12 3 2
+reset_vec CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+$Firmware.obj
+cinit CODE 0 15 15 C 2
+intentry CODE 0 4 4 E 2
+text11 CODE 0 215 215 18 2
+text10 CODE 0 257 257 9 2
+text9 CODE 0 268 268 8 2
+text8 CODE 0 B0 B0 75 2
+text7 CODE 0 22D 22D 12 2
+text6 CODE 0 23F 23F F 2
+text5 CODE 0 24E 24E 9 2
+text4 CODE 0 21 21 8F 2
+text3 CODE 0 125 125 4A 2
+text2 CODE 0 260 260 8 2
+text1 CODE 0 1F5 1F5 20 2
+maintext CODE 0 1B4 1B4 41 2
+cstackBANK0 BANK0 1 20 20 19 1
+cstackCOMMON COMMON 1 70 70 A 1
+bssBANK0 BANK0 1 39 39 6 1
+bssCOMMON COMMON 1 7A 7A 2 1
+strings STRING 0 16F 16F 45 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 003F-006F 1
+BANK1 00A0-00EF 1
+BANK2 0110-016F 1
+BANK3 0190-01EF 1
+CODE 0003-0003 2
+CODE 0270-1FFF 2
+COMMON 007C-007D 1
+CONST 0003-0003 2
+CONST 0270-1FFF 2
+EEDATA 2100-21FF 2
+ENTRY 0003-0003 2
+ENTRY 0270-1FFF 2
+IDLOC 2000-2003 2
+RAM 003F-006F 1
+RAM 00A0-00EF 1
+RAM 0110-016F 1
+RAM 0190-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STACK 0110-016F 1
+STRCODE 0003-0003 2
+STRCODE 0270-1FFF 2
+STRING 0003-0003 2
+STRING 0270-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$Firmware.obj
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":13 4 intentry CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":697 15 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":700 15 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":716 15 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":717 16 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":720 17 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":721 18 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":722 19 cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":723 1A cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":724 1B cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":725 1C cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":731 1D cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":732 1D cinit CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\Firmware.as":733 1E cinit CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":6 21 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":14 21 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":15 24 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":16 26 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":17 31 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":18 33 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":19 33 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":20 35 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":21 40 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":23 44 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":24 4C text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":25 52 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":26 54 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":27 56 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":28 5F text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":26 63 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":31 64 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":32 6D text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":33 7D text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":34 8B text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":36 8C text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":37 95 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":39 99 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":40 9C text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\aldiv.c":41 A7 text4 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":13 B0 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":16 B0 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":18 B2 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":20 B3 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":23 BC text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":25 C2 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":28 C7 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":29 D0 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":30 D6 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":31 DA text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":32 DE text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":33 E2 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":36 EA text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":37 EB text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":39 F0 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":42 FA text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":37 102 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":46 10A text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":47 110 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":50 116 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":53 118 text8 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":6 125 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":12 125 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":15 128 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":16 153 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":19 157 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":20 158 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":21 159 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":22 15A text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":23 15B text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":24 15C text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":25 15D text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":28 15E text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":29 161 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":30 162 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":31 163 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":32 164 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":33 165 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":34 166 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":35 167 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":38 168 text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":39 16B text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":40 16E text3 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":55 1B4 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":58 1B4 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":59 1B8 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":60 1BC maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":61 1BF maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":62 1C2 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":63 1C6 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":66 1CA maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":67 1D7 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":68 1DC maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":71 1E1 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":74 1EC maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":75 1ED maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":77 1EE maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\main.c":79 1F4 maintext CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":48 1F5 text1 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":51 1F8 text1 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":54 202 text1 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":55 20E text1 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":51 214 text1 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":25 215 text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":27 215 text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":28 221 text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":30 222 text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":32 226 text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":33 229 text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":35 22B text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":36 22C text11 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":6 22D text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":9 22D text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":10 230 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":11 231 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":12 232 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":13 233 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":17 234 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":18 237 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":21 238 text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":22 23B text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\adc.c":23 23E text7 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":23 23F text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":26 23F text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":27 242 text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":28 243 text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":29 244 text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":30 245 text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":31 246 text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":32 247 text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":33 24A text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":34 24D text6 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":36 24E text5 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":38 24E text5 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":39 256 text5 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":36 257 text10 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":38 257 text10 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\timers.c":39 25F text10 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":42 260 text2 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":44 263 text2 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":45 265 text2 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":46 267 text2 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":42 268 text9 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":44 269 text9 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":45 26D text9 CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\usart.c":46 26F text9 CODE
+$startup.obj
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":40 0 functab CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":41 0 functab CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":42 0 functab CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":43 0 functab CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":44 0 functab CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":45 0 functab CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":64 0 reset_vec CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":69 0 reset_vec CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":74 12 init CODE
+"C:\Users\Ninguem\Desktop\Trabalho final embarcado\supervv\Firmware\startup.as":77 12 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___aldiv@counter 29 0 BANK0 1 cstackBANK0 Firmware.obj
+__CFG_WRT$OFF 0 0 ABS 0 - Firmware.obj
+__S0 2008 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_ISR 160 0 CODE 0 text8 Firmware.obj
+__Hintentry 24 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__size_of_USART_WriteString 0 0 ABS 0 - Firmware.obj
+__pintentry 8 0 CODE 0 intentry Firmware.obj
+__end_ofi1_TIMER1_Set 4C0 0 CODE 0 text10 Firmware.obj
+_TMR0 1 0 ABS 0 - Firmware.obj
+_TMR1 E 0 ABS 0 - Firmware.obj
+_ADC_Read 42A 0 CODE 0 text11 Firmware.obj
+_OERR C1 0 ABS 0 - Firmware.obj
+_main 368 0 CODE 0 maintext Firmware.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - Firmware.obj
+ltemp 7E 0 ABS 0 - Firmware.obj
+ttemp 7E 0 ABS 0 - Firmware.obj
+wtemp 7E 0 ABS 0 - Firmware.obj
+start 24 0 CODE 0 init startup.obj
+__end_of___aldiv 160 0 CODE 0 text4 Firmware.obj
+_RCREG 1A 0 ABS 0 - Firmware.obj
+_TRISA 85 0 ABS 0 - Firmware.obj
+_TRISB 86 0 ABS 0 - Firmware.obj
+_TRISC 87 0 ABS 0 - Firmware.obj
+_TXREG 19 0 ABS 0 - Firmware.obj
+_PORTA 5 0 ABS 0 - Firmware.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_PORTB 6 0 ABS 0 - Firmware.obj
+_SPBRG 99 0 ABS 0 - Firmware.obj
+_PORTC 7 0 ABS 0 - Firmware.obj
+ltemp0 7E 0 ABS 0 - Firmware.obj
+ttemp0 7E 0 ABS 0 - Firmware.obj
+wtemp0 7E 0 ABS 0 - Firmware.obj
+ltemp1 82 0 ABS 0 - Firmware.obj
+ttemp1 81 0 ABS 0 - Firmware.obj
+wtemp1 80 0 ABS 0 - Firmware.obj
+ltemp2 86 0 ABS 0 - Firmware.obj
+ttemp2 84 0 ABS 0 - Firmware.obj
+wtemp2 82 0 ABS 0 - Firmware.obj
+ltemp3 80 0 ABS 0 - Firmware.obj
+ttemp3 87 0 ABS 0 - Firmware.obj
+wtemp3 84 0 ABS 0 - Firmware.obj
+ttemp4 7F 0 ABS 0 - Firmware.obj
+wtemp4 86 0 ABS 0 - Firmware.obj
+wtemp5 88 0 ABS 0 - Firmware.obj
+wtemp6 7F 0 ABS 0 - Firmware.obj
+interrupt_function 8 0 CODE 0 intentry Firmware.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__end_of_TIMER1_Set 4AE 0 CODE 0 text5 Firmware.obj
+i1TIMER1_Set@count 70 0 COMMON 1 cstackCOMMON Firmware.obj
+__end_of__stringtab 2EA 0 STRING 0 strings Firmware.obj
+__end_of_TIMER1_Init 49C 0 CODE 0 text6 Firmware.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of__stringdata 368 0 STRING 0 strings Firmware.obj
+__end_of_USART_WriteChar 4D0 0 CODE 0 text2 Firmware.obj
+_ADC_Init 45A 0 CODE 0 text7 Firmware.obj
+__end_of_ISR 24A 0 CODE 0 text8 Firmware.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+TIMER1_Set@count 20 0 BANK0 1 cstackBANK0 Firmware.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+_PIE1bits 8C 0 ABS 0 - Firmware.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_PIR1bits C 0 ABS 0 - Firmware.obj
+ISR@index 79 0 COMMON 1 cstackCOMMON Firmware.obj
+_contador 7A 0 COMMON 1 bssCOMMON Firmware.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+?___aldiv 20 0 BANK0 1 cstackBANK0 Firmware.obj
+_ADRESH 1E 0 ABS 0 - Firmware.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_ADRESL 9E 0 ABS 0 - Firmware.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_TIMER1_Init 47E 0 CODE 0 text6 Firmware.obj
+__size_ofi1_USART_WriteChar 0 0 ABS 0 - Firmware.obj
+__size_ofi1_TIMER1_Set 0 0 ABS 0 - Firmware.obj
+__size_of_ADC_Read 0 0 ABS 0 - Firmware.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 Firmware.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - Firmware.obj
+__Hinit 24 0 CODE 0 init -
+__Linit 24 0 CODE 0 init -
+__end_of_main 3EA 0 CODE 0 maintext Firmware.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 3A 0 CODE 0 cinit Firmware.obj
+___aldiv@sign 2A 0 BANK0 1 cstackBANK0 Firmware.obj
+__size_of_ISR 0 0 ABS 0 - Firmware.obj
+__stringtab 2DE 0 STRING 0 strings Firmware.obj
+__size_of_ADC_Init 0 0 ABS 0 - Firmware.obj
+_RCSTAbits 18 0 ABS 0 - Firmware.obj
+_TXSTAbits 98 0 ABS 0 - Firmware.obj
+_T1CONbits 10 0 ABS 0 - Firmware.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__pstrings 2DE 0 STRING 0 strings Firmware.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+USART_WriteChar@USART_Data 20 0 BANK0 1 cstackBANK0 Firmware.obj
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 2 0 ABS 0 - Firmware.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext1 3EA 0 CODE 0 text1 Firmware.obj
+__ptext2 4C0 0 CODE 0 text2 Firmware.obj
+__ptext3 24A 0 CODE 0 text3 Firmware.obj
+__ptext4 42 0 CODE 0 text4 Firmware.obj
+__ptext5 49C 0 CODE 0 text5 Firmware.obj
+_TIMER1_Set 49C 0 CODE 0 text5 Firmware.obj
+__ptext6 47E 0 CODE 0 text6 Firmware.obj
+__ptext7 45A 0 CODE 0 text7 Firmware.obj
+__ptext8 160 0 CODE 0 text8 Firmware.obj
+__ptext9 4D0 0 CODE 0 text9 Firmware.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+_USART_WriteChar 4C0 0 CODE 0 text2 Firmware.obj
+__end_of__initialization 3A 0 CODE 0 cinit Firmware.obj
+__size_of_USART_Init 0 0 ABS 0 - Firmware.obj
+__size_of_TIMER1_Set 0 0 ABS 0 - Firmware.obj
+ISR@checksum 78 0 COMMON 1 cstackCOMMON Firmware.obj
+USART_WriteString@str 22 0 BANK0 1 cstackBANK0 Firmware.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__size_of_TIMER1_Init 0 0 ABS 0 - Firmware.obj
+__Hspace_0 2008 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 7C 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+USART_Init@BR 38 0 BANK0 1 cstackBANK0 Firmware.obj
+__Hcinit 42 0 CODE 0 cinit -
+__Lcinit 2A 0 CODE 0 cinit -
+__CFG_FOSC$HS 0 0 ABS 0 - Firmware.obj
+___aldiv 42 0 CODE 0 text4 Firmware.obj
+_USART_WriteString 3EA 0 CODE 0 text1 Firmware.obj
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - Firmware.obj
+__size_of_USART_WriteChar 0 0 ABS 0 - Firmware.obj
+_ADC_Buffer 39 0 BANK0 1 bssBANK0 Firmware.obj
+_USART_Init 24A 0 CODE 0 text3 Firmware.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 39 0 BANK0 1 bssBANK0 Firmware.obj
+i1USART_WriteChar@USART_Data 70 0 COMMON 1 cstackCOMMON Firmware.obj
+__ptext10 4AE 0 CODE 0 text10 Firmware.obj
+__ptext11 42A 0 CODE 0 text11 Firmware.obj
+_ADCON0bits 1F 0 ABS 0 - Firmware.obj
+_ADCON1bits 9F 0 ABS 0 - Firmware.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - Firmware.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - Firmware.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 7A 0 COMMON 1 bssCOMMON Firmware.obj
+_INTCONbits B 0 ABS 0 - Firmware.obj
+__Hend_init 2A 0 CODE 0 end_init -
+__Lend_init 24 0 CODE 0 end_init -
+ADC_Read@channel 70 0 COMMON 1 cstackCOMMON Firmware.obj
+___aldiv@divisor 20 0 BANK0 1 cstackBANK0 Firmware.obj
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+i1_USART_WriteChar 4D0 0 CODE 0 text9 Firmware.obj
+i1_TIMER1_Set 4AE 0 CODE 0 text10 Firmware.obj
+__stringdata 2EA 0 STRING 0 strings Firmware.obj
+__size_of___aldiv 0 0 ABS 0 - Firmware.obj
+USART_Init@BaudRate 2F 0 BANK0 1 cstackBANK0 Firmware.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - Firmware.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__end_of_ADC_Read 45A 0 CODE 0 text11 Firmware.obj
+__end_of_USART_WriteString 42A 0 CODE 0 text1 Firmware.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON Firmware.obj
+__CFG_CPD$OFF 0 0 ABS 0 - Firmware.obj
+start_initialization 2A 0 CODE 0 cinit Firmware.obj
+___aldiv@quotient 2B 0 BANK0 1 cstackBANK0 Firmware.obj
+__end_of_ADC_Init 47E 0 CODE 0 text7 Firmware.obj
+__end_ofi1_USART_WriteChar 4E0 0 CODE 0 text9 Firmware.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 368 0 CODE 0 maintext Firmware.obj
+_OPTION_REGbits 81 0 ABS 0 - Firmware.obj
+__initialization 2A 0 CODE 0 cinit Firmware.obj
+__stringbase 2E8 0 STRING 0 strings Firmware.obj
+__CFG_CP$OFF 0 0 ABS 0 - Firmware.obj
+__end_of_USART_Init 2DE 0 CODE 0 text3 Firmware.obj
+__CFG_LVP$OFF 0 0 ABS 0 - Firmware.obj
+___aldiv@dividend 24 0 BANK0 1 cstackBANK0 Firmware.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 3 2
+intentry 0 4 8 16B 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 C 1
+cstackBANK0 1 20 20 1F 1
+strings 0 16F 2DE 45 2
+maintext 0 1B4 368 BC 2

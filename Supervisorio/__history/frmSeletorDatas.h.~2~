@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef frmSeletorDatasH
+#define frmSeletorDatasH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+//---------------------------------------------------------------------------
+class TFormSeletorDatas : public TForm
+{
+__published:	// IDE-managed Components
+	TGroupBox *GroupBox1;
+	TLabel *Label1;
+	TDateTimePicker *eDataDe;
+	TLabel *Label2;
+	TDateTimePicker *eDataAte;
+	TButton *btnConfirmar;
+	void __fastcall btnConfirmarClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormSeletorDatas(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormSeletorDatas *FormSeletorDatas;
+//---------------------------------------------------------------------------
+#endif

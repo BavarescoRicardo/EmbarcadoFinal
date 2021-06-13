@@ -1,0 +1,39 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{89AC130F-115A-443C-B355-F3B8C92CA8B7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Supervisorio.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\Supervisorio\Supervisorio\Supervisorio.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Supervisorio">
+        <MSBuild Projects="..\..\Supervisorio\Supervisorio\Supervisorio.cbproj"/>
+    </Target>
+    <Target Name="Supervisorio:Clean">
+        <MSBuild Projects="..\..\Supervisorio\Supervisorio\Supervisorio.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Supervisorio:Make">
+        <MSBuild Projects="..\..\Supervisorio\Supervisorio\Supervisorio.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Supervisorio;Supervisorio"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Supervisorio:Clean;Supervisorio:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Supervisorio:Make;Supervisorio:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

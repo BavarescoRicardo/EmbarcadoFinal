@@ -1,0 +1,1 @@
+ usart.d  usart.p1:  C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/usart.c C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/config.h C:/Users/Ninguem/Desktop/Trabalho\ final\ embarcado/supervv/Firmware/usart.h

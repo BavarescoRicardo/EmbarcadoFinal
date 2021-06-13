@@ -1,0 +1,67 @@
+object FormSeletorDatas: TFormSeletorDatas
+  Left = 0
+  Top = 0
+  Caption = 'FormSeletorDatas'
+  ClientHeight = 216
+  ClientWidth = 341
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object gpFaixaDatas: TGroupBox
+    Left = 24
+    Top = 32
+    Width = 273
+    Height = 129
+    Caption = 'Informe a faixa de datas'
+    TabOrder = 0
+    object lblDataInicial: TLabel
+      Left = 72
+      Top = 49
+      Width = 13
+      Height = 13
+      Caption = 'De'
+    end
+    object lblDataFinal: TLabel
+      Left = 72
+      Top = 88
+      Width = 17
+      Height = 13
+      Caption = 'At'#233
+    end
+    object eDataDe: TDateTimePicker
+      Left = 104
+      Top = 44
+      Width = 81
+      Height = 21
+      Date = 44101.000000000000000000
+      Time = 0.054656377316860020
+      TabOrder = 0
+    end
+    object eDataAte: TDateTimePicker
+      Left = 104
+      Top = 83
+      Width = 81
+      Height = 21
+      Date = 44101.000000000000000000
+      Time = 0.054656377316860020
+      TabOrder = 1
+    end
+  end
+  object btnConfirmar: TButton
+    Left = 222
+    Top = 167
+    Width = 75
+    Height = 25
+    Caption = 'Confirmar'
+    TabOrder = 1
+    OnClick = btnConfirmarClick
+  end
+end
